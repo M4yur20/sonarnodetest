@@ -1,0 +1,35 @@
+{
+  "name": "NodeSonarExample",
+  "scripts": {
+    "sonar": "node sonar-project.js",
+    "test": "jest --coverage"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testResultsProcessor": "jest-sonar-reporter"
+  },
+  "jestSonar": {
+    "reportPath": "coverage",
+    "reportFile": "test-reporter.xml",
+    "indent": 4
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest-sonar-reporter": "^2.0.0",
+    "sonarqube-scanner": "^2.8.1",
+    "supertest": "^6.2.3"
+  },
+  "dependencies": {
+    "@types/jest": "^28.1.3",
+    "jest": "^28.1.1",
+    "sonar-scanner": "^3.1.0"
+  }
+}
